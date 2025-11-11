@@ -9,13 +9,13 @@ const projects = [
     {
         title: "Connectogen",
         description: "A full-stack academic networking platform with profile creation, messaging, and discovery features.",
-        tech: ["React", "TypeScript", "MongoDB"],
+        tech: ["Next.js", "React", "TypeScript", "MongoDB"],
         github: "https://github.com/connectogen-project",
         icon: <Network className="h-6 w-6 text-primary" ></Network>
     },
     {
         title: "Lemur.casa",
-        description: "Household task management tool with real-time updates, drag-and-drop interface, and team features.",
+        description: "A real-time home coordination app that streamlines routines, assigns tasks, and keeps everyone aligned.",
         tech: ["Next.js", "Convex", "Tailwind CSS", "Shadcn"],
         github: "https://github.com/ellalloyd/lemur-casa",
         icon: <ListCheck className="h-6 w-6 text-primary" ></ListCheck>
