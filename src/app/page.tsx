@@ -20,7 +20,7 @@ const staggerContainer = {
 
 const Home = () => {
   return (
-    <div>
+    <div className="my-10">
       {/* Hero Section */}
       <section id="home" className="relative flex items-center pt-10">
 
@@ -45,7 +45,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Software Engineer . Frontend . Product-Minded
+              Software Engineer | Frontend | Product-Minded
             </motion.p>
 
             {/* Social Links */}
@@ -104,7 +104,7 @@ const Home = () => {
               Bio
             </motion.h1>
             <motion.p
-              className="text-lg text-primary/90 mb-6"
+              className="text-lg text-primary/90"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -118,10 +118,20 @@ const Home = () => {
 
       {/* Projects Preview */}
       <section id="projects" className="pt-10">
-        <div className="">
-          <h2 className="font-serif text-3xl font-bold text-primary mb-4">Projects</h2>
+        <motion.div
+          className=""
+          variants={staggerContainer}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.h2
+            className="font-serif text-3xl font-bold text-primary mb-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          > Projects </motion.h2>
           <ProjectGrid />
-        </div>
+        </motion.div>
       </section>
     </div>
   );

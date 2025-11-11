@@ -2,6 +2,8 @@
 import { cn } from "@/lib/utils";
 import { Apple, University, ListCheck, Network } from "lucide-react";
 import { useEffect, useRef, useState, type JSX } from "react";
+import { motion } from "motion/react";
+
 
 const projects = [
     {
@@ -80,7 +82,12 @@ export function ProjectGrid() {
 
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-3 gap-4 w-full max-md:[&>div]:aspect-square">
+        <motion.div
+            className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-3 gap-4 w-full max-md:[&>div]:aspect-square"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+        >
             <div className="md:row-span-2 aspect-square md:col-span-3">
                 <ProjectCard className="bg-linear-to-br from-yellow-400 to-red-400" {...projects[0]} />
             </div>
@@ -94,6 +101,6 @@ export function ProjectGrid() {
                 <ProjectCard className="bg-linear-to-br from-pink-400 to-emerald-400" {...projects[3]} />
             </div>
 
-        </div>
+        </motion.div>
     )
 }
