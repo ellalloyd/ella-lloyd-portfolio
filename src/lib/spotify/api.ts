@@ -1,10 +1,14 @@
 import 'server-only';
+import { cacheLife } from "next/cache";
 
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 const SPOTIFY_REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
 
 async function getAccessToken() {
+    'use cache'
+    cacheLife({ revalidate: 1800, expire: 2400 }) // 30 minutes revalidate, 40 minutes expire
+
     const requestBody = new URLSearchParams();
     requestBody.append('grant_type', 'refresh_token');
     requestBody.append('refresh_token', SPOTIFY_REFRESH_TOKEN!);
@@ -24,6 +28,8 @@ async function getAccessToken() {
 
 
 export async function getMostRecentTrack() {
+    'use cache'
+    cacheLife("minutes") // default cache for stale after 5 mni, revalidate after 1 min, expire after 1 hour
 
     return fetch('https://api.spotify.com/v1/me/player/recently-played?limit=1', {
         method: 'GET',
