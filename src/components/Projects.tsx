@@ -1,32 +1,21 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Apple, ExternalLink, Github, University, ListCheck, Network } from "lucide-react";
+'use client'
+import { cn } from "@/lib/utils";
+import { Apple, University, ListCheck, Network } from "lucide-react";
+import { useEffect, useRef, useState, type JSX } from "react";
 import { motion } from "motion/react";
 
-const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 }
-};
-
-const staggerContainer = {
-    animate: {
-        transition: {
-            staggerChildren: 0.1
-        }
-    }
-};
 
 const projects = [
     {
         title: "Connectogen",
         description: "A full-stack academic networking platform with profile creation, messaging, and discovery features.",
-        tech: ["React", "TypeScript", "MongoDB"],
+        tech: ["Next.js", "React", "TypeScript", "MongoDB"],
         github: "https://github.com/connectogen-project",
         icon: <Network className="h-6 w-6 text-primary" ></Network>
     },
     {
-        title: "Lemur Casa",
-        description: "Household task management tool with real-time updates, drag-and-drop interface, and team features.",
+        title: "Lemur.casa",
+        description: "A real-time home coordination app that streamlines routines, assigns tasks, and keeps everyone aligned.",
         tech: ["Next.js", "Convex", "Tailwind CSS", "Shadcn"],
         github: "https://github.com/ellalloyd/lemur-casa",
         icon: <ListCheck className="h-6 w-6 text-primary" ></ListCheck>
@@ -46,99 +35,92 @@ const projects = [
 
 ];
 
-const Projects = () => {
+interface ProjectCardProps {
+    title: string
+    description: string;
+    tech: string[]
+    icon: JSX.Element
+    className?: string
+}
+
+function ProjectCard({ title, description, tech, icon, className }: ProjectCardProps) {
+
+    const [isSelected, setIsSelected] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        function handleClickOutside(e: MouseEvent) {
+            if (ref.current && !ref.current.contains(e.target as Node)) {
+                setIsSelected(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    return (
+        <div className={cn("@container relative h-full border rounded-lg overflow-hidden p-6 group", className)}
+            ref={ref}
+            onClick={() => setIsSelected((prev) => (!prev))}>
+            <div className="h-full flex flex-col justify-end">
+                <span className=" text-white/80 py-2">{tech.join(' | ')}</span>
+                <div className="flex flex-row items-center @sm:[&_svg]:text-3xl [&_svg]:text-lg [&_svg]:stroke-white gap-x-2">
+                    {icon}
+                    <h3 className="font-serif text-white @sm:text-3xl text-lg">{title}</h3>
+                </div>
+            </div>
+            <div data-active={isSelected} className="opacity-0 group-hover:opacity-100 data-[active=true]:opacity-100 transition-opacity absolute inset-0 p-4 bg-black/50 backdrop-blur-sm">
+                <p className="text-white font-sans">{description}</p>
+
+            </div>
+        </div>
+    )
+}
+
+interface AnimatedProjectsProps {
+    fadeInUp: {
+        initial: { opacity: number; y: number };
+        animate: { opacity: number; y: number };
+    };
+    staggerContainer: { animate: { transition: { staggerChildren: number } } };
+}
+
+
+export function ProjectGrid({ fadeInUp, staggerContainer }: AnimatedProjectsProps) {
+
     return (
         <motion.div
-            className="py-20"
+            className=""
+            variants={staggerContainer}
             initial="initial"
             animate="animate"
-            variants={staggerContainer}
         >
-            <div className="">
-                <motion.h1
-                    className="font-serif text-5xl sm:text-5xl font-bold mb-4 text-primary"
-                    variants={fadeInUp}
-                    transition={{ duration: 0.6 }}
-                >
-                    Projects
-                </motion.h1>
-                <motion.p
-                    className="text-lg text-primary/90 mx-auto mb-6"
-                    variants={fadeInUp}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                >
-                    A showcase of my recent work and side projects
-                </motion.p>
+            <motion.h2
+                className="font-serif text-3xl font-bold text-primary mb-4"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+            > Projects </motion.h2>
+            <motion.div
+                className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-3 gap-4 w-full max-md:[&>div]:aspect-square"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+            >
+                <div className="md:row-span-2 aspect-square md:col-span-3">
+                    <ProjectCard className="bg-linear-to-br from-yellow-400 to-red-400" {...projects[0]} />
+                </div>
+                <div className="md:col-start-4 md:row-span-1 md:col-span-2  ">
+                    <ProjectCard className="bg-linear-to-br from-violet-400 to-orange-400" {...projects[1]} />
+                </div>
+                <div className="md:col-start-4  md:row-start-2 md:row-span-1 md:col-span-2">
+                    <ProjectCard className="bg-linear-to-br from-blue-400 to-rose-400" {...projects[2]} />
+                </div>
+                <div className="md:row-start-3 md:col-span-5">
+                    <ProjectCard className="bg-linear-to-br from-pink-400 to-emerald-400" {...projects[3]} />
+                </div>
 
-                <motion.div
-                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                    variants={staggerContainer}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true, margin: "-100px" }}
-                >
-                    {projects.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            variants={fadeInUp}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <Card
-                                className="group hover:shadow-(--shadow-medium) transition-all duration-300 bg-linear-to-br from-card to-card/50 border-2 border-border/50 hover:border-primary/30 h-full flex flex-col"
-                            >
-
-
-                                <CardHeader className="relative z-10 pb-4">
-                                    <div className="flex items-start justify-between gap-3 mb-3">
-                                        <div className="h-12 w-12 rounded-lg bg-linear-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                            {project.icon}
-                                        </div>
-                                        {project.github &&
-                                            <Button
-                                                asChild
-                                                size="sm"
-                                                variant="ghost"
-                                                className="hover:bg-primary/10 hover:text-primary"
-                                            >
-                                                <a
-                                                    href={project.github}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    aria-label="View source code on GitHub"
-                                                >
-                                                    <ExternalLink className="h-4 w-4" />
-                                                </a>
-                                            </Button>
-                                        }
-                                    </div>
-                                    <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
-                                        {project.title}
-                                    </CardTitle>
-                                </CardHeader>
-
-                                <CardContent className="relative z-10 flex-1 flex flex-col">
-                                    <CardDescription className="text-foreground/70 mb-4 flex-1">
-                                        {project.description}
-                                    </CardDescription>
-
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.tech.map((tech) => (
-                                            <span
-                                                key={tech}
-                                                className="text-xs px-3 py-1.5 bg-primary/10 text-primary rounded-full border border-primary/20 hover:bg-primary/20 transition-colors duration-200"
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </div>
+            </motion.div>
         </motion.div>
-    );
-};
-
-export default Projects;
+    )
+}
