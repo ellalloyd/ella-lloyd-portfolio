@@ -16,8 +16,8 @@ export async function Spotify() {
     return (
         <HoverCard>
             <HoverCardTrigger className="flex flex-row gap-2 items-center cursor-pointer w-fit">
-                <AudioLinesIcon className="size-6 [&_svg]:stroke-muted-foreground!" />
-                <p className="text-lg text-muted-foreground">Listening to...</p>
+                <AudioLinesIcon className="size-6 [&_svg]:stroke-primary/70!" />
+                <p className="text-lg text-primary/70">Listening to...</p>
             </HoverCardTrigger>
             <HoverCardContent className="flex flex-row gap-4 items-center bg-white p-4 rounded-lg max-w-2xl">
                 <div className="flex">

@@ -30,7 +30,7 @@ export function AnimatedHeader({ fadeInUp, staggerContainer }: AnimatedHeaderPro
                     Ella Lloyd
                 </motion.h1>
                 <motion.p
-                    className="text-lg text-primary/90 mb-4"
+                    className="text-lg text-primary/70 mb-4"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -49,7 +49,7 @@ export function AnimatedHeader({ fadeInUp, staggerContainer }: AnimatedHeaderPro
                         href="https://github.com/ellalloyd"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:text-accent transition-colors hover:scale-110 duration-200"
+                        className="text-primary/70 hover:text-accent transition-colors hover:scale-110 duration-200"
                         aria-label="GitHub"
                     >
                         <Github />
@@ -58,14 +58,14 @@ export function AnimatedHeader({ fadeInUp, staggerContainer }: AnimatedHeaderPro
                         href="https://linkedin.com/in/ella-lloyd"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:text-accent transition-colors hover:scale-110 duration-200"
+                        className="text-primary/70 hover:text-accent transition-colors hover:scale-110 duration-200"
                         aria-label="LinkedIn"
                     >
                         <Linkedin />
                     </a>
                     <a
                         href="mailto:elloyd116@gmail.com"
-                        className="text-primary hover:text-accent transition-colors hover:scale-110 duration-200"
+                        className="text-primary/70 hover:text-accent transition-colors hover:scale-110 duration-200"
                         aria-label="Email"
                     >
                         <Mail />
@@ -87,7 +87,7 @@ export function AnimatedHeader({ fadeInUp, staggerContainer }: AnimatedHeaderPro
                     Bio
                 </motion.h1>
                 <motion.p
-                    className="text-lg text-primary/90"
+                    className="text-lg text-primary/70"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}

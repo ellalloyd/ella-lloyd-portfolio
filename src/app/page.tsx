@@ -1,5 +1,6 @@
 import { ProjectGrid } from "@/components/Projects";
 import { AnimatedHeader } from "@/components/AnimatedHeader";
+import { Spotify } from "@/components/Spotify";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -26,6 +27,8 @@ const Home = () => {
       <section id="projects" className="mt-4">
         <ProjectGrid fadeInUp={fadeInUp} staggerContainer={staggerContainer} />
       </section>
+
+
     </div>
   );
 };
