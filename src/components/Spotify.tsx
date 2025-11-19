@@ -15,9 +15,9 @@ export async function Spotify() {
     const artistUrl = recentTrackData?.items?.[0]?.track?.artists?.[0]?.external_urls?.spotify || '';
     return (
         <HoverCard>
-            <HoverCardTrigger className="flex flex-row gap-2 items-center cursor-pointer w-fit">
-                <AudioLinesIcon className="size-6 [&_svg]:stroke-primary/70!" />
-                <p className="text-lg text-primary/70">Listening to...</p>
+            <HoverCardTrigger className="flex flex-row gap-2 justify-center items-center cursor-pointer w-full h-full bg-purple-300/20 p-2 rounded-lg hover:bg-purple-300/50 transition-colors">
+                <AudioLinesIcon className="size-6 [&_svg]:stroke-primary/70! align-center" />
+                <p className="text-lg text-primary/70 align-center">Listening to...</p>
             </HoverCardTrigger>
             <HoverCardContent className="flex flex-row gap-4 items-center bg-white p-4 rounded-lg max-w-2xl">
                 <div className="flex">
