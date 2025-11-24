@@ -59,18 +59,22 @@ function ProjectCard({ title, description, tech, icon, className }: ProjectCardP
     }, []);
 
     return (
-        <div className={cn("@container relative h-full border rounded-lg overflow-hidden p-6 group", className)}
+        <div className={cn(
+            "@container relative h-full border rounded-lg overflow-hidden p-6 group",
+            className,
+            "bg-purple-300/20 hover:bg-purple-300/50 transition-colors text-black"
+        )}
             ref={ref}
             onClick={() => setIsSelected((prev) => (!prev))}>
             <div className="h-full flex flex-col justify-end">
-                <span className=" text-white/80 py-2">{tech.join(' | ')}</span>
-                <div className="flex flex-row items-center @sm:[&_svg]:text-3xl [&_svg]:text-lg [&_svg]:stroke-white gap-x-2">
+                <span className="text-black/80 py-2">{tech.join(' | ')}</span>
+                <div className="flex flex-row items-center @sm:[&_svg]:text-3xl [&_svg]:text-lg [&_svg]:stroke-black gap-x-2">
                     {icon}
-                    <h3 className="font-serif text-white @sm:text-3xl text-lg">{title}</h3>
+                    <h3 className="font-serif text-black @sm:text-3xl text-lg">{title}</h3>
                 </div>
             </div>
-            <div data-active={isSelected} className="opacity-0 group-hover:opacity-100 data-[active=true]:opacity-100 transition-opacity absolute inset-0 p-4 bg-black/50 backdrop-blur-sm">
-                <p className="text-white font-sans">{description}</p>
+            <div data-active={isSelected} className="opacity-0 group-hover:opacity-100 data-[active=true]:opacity-100 transition-opacity absolute inset-0 p-4 bg-purple-200/80 backdrop-blur-xs pointer-events-none">
+                <p className="text-black font-sans">{description}</p>
 
             </div>
         </div>
@@ -127,7 +131,7 @@ export function ProjectGrid({ fadeInUp, staggerContainer }: AnimatedProjectsProp
             <div className="flex flex-col gap-4 w-full py-4">
                 {projects.map((project, index) => (
                     <div key={index}>
-                        <ProjectCard {...project} className="bg-linear-to-br from-pink-400 to-emerald-400" />
+                        <ProjectCard {...project} />
                     </div>
                 ))}
             </div>
