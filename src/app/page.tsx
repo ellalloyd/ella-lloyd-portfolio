@@ -20,7 +20,7 @@ const staggerContainer = {
 
 const Home = () => {
   return (
-    <div className="grid grid-cols-12 grid-rows-8 auto-rows-[200px] auto-cols-[200px] place-items-start gap-4 max-h-screen p-6">
+    <div className="grid grid-cols-12 grid-rows-8 auto-rows-[200px] auto-cols-[200px] place-items-start gap-4 max-h-screen p-12">
 
       {/* Name Section */}
       <section id="home" className="col-start-1 row-start-1 col-span-3 row-span-1">
