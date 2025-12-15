@@ -48,11 +48,11 @@ const currentTrack = {
 };
 
 export const socialLinks = [
-    { icon: Github, url: "#", label: "GitHub" },
-    { icon: Linkedin, url: "#", label: "LinkedIn" },
-    { icon: Twitter, url: "#", label: "Twitter" },
-    { icon: Instagram, url: "#", label: "Instagram" },
-    { icon: Mail, url: "#", label: "Email" }
+    { icon: Github, url: "https://github.com/ellalloyd", label: "GitHub" },
+    { icon: Linkedin, url: "https://linkedin.com/in/ella-lloyd", label: "LinkedIn" },
+    { icon: Twitter, url: "https://x.com/lalloydcodes", label: "Twitter" },
+    { icon: Instagram, url: "https://instagram.com/ellallifts", label: "Instagram" },
+    { icon: Mail, url: "mailto:elloyd116@gmail.com", label: "Email" }
 ];
 
 // Powerlifting data
