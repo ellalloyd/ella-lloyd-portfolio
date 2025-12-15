@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${libreBaskerville.variable} ${poppins.variable} antialiased square-dots-pattern font-sans`}
       >
-        <main className="container max-w-3xl mx-auto px-4 md:px-0">
+        <main>
           {children}
         </main>
       </body>

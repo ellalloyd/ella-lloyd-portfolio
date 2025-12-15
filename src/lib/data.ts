@@ -1,8 +1,9 @@
 import { Github, Linkedin, Mail, Twitter, Instagram } from "lucide-react";
+import { LiftingData } from "./types";
 
 
 // Portfolio data
-const projects = [
+export const projects = [
     {
         id: 1,
         name: "E-Commerce Platform",
@@ -29,7 +30,7 @@ const projects = [
     }
 ];
 
-const blogPost = {
+export const blogPost = {
     title: "Building Scalable Web Applications",
     author: "Ella Lloyd",
     date: "Dec 10, 2024",
@@ -55,7 +56,7 @@ export const socialLinks = [
 ];
 
 // Powerlifting data
-const liftingData = [
+export const liftingData: LiftingData[] = [
     { month: "Jan", squat: 225, bench: 155, deadlift: 275 },
     { month: "Feb", squat: 235, bench: 160, deadlift: 285 },
     { month: "Mar", squat: 245, bench: 165, deadlift: 295 },

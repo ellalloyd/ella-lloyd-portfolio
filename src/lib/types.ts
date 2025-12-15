@@ -13,3 +13,17 @@ export type SocialLink = {
     url: string,
     label: string,
 }
+
+export type LiftingData = {
+    month: string,
+    bench: number,
+    squat: number,
+    deadlift: number,
+}
+
+export type BlogData = {
+    author: string,
+    date: string,
+    title: string,
+    summary: string,
+}

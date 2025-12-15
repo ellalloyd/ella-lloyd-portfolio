@@ -2,7 +2,7 @@ import { SocialLink } from "@/lib/types";
 
 function LinksCard({ socialLinks }: { socialLinks: SocialLink[] }) {
     return (
-        <div>
+        <div className="flex items-center justify-between gap-2 w-full">
             {socialLinks.map((link, index) => {
                 const Icon = link.icon;
                 return (
