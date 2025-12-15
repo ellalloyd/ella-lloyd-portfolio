@@ -10,7 +10,7 @@ function DesktopLayout() {
         <div className="bg-[#210534] w-full h-screen p-[24px]">
             <div className="grid grid-cols-6 grid-rows-6 gap-[24px] h-full">
                 {/* Projects Card - spans 2 columns, 5 rows */}
-                <div className="col-start-5 col-span-2 row-start-1 row-span-5 bg-[#b8abc1] rounded-[32px] p-[32px] flex flex-col gap-[16px]">
+                <div className="col-start-5 col-span-2 row-start-1 row-span-5 bg-[#b8abc1] rounded-[32px] p-[32px]">
                     <ProjectsBento />
                 </div>
 
