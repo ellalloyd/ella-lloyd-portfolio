@@ -15,7 +15,7 @@ function DesktopLayout() {
                 </div>
 
                 {/* Links Card - bottom right */}
-                <div className="col-start-5 col-span-2 row-start-6 bg-card rounded-[32px] p-[32px]">
+                <div className="lg:col-start-5 lg:col-span-2 lg:row-start-6 bg-card rounded-4xl p-8 flex items-center">
                     <LinksCard socialLinks={socialLinks} />
                 </div>
 
