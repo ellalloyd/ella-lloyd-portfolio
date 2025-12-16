@@ -16,7 +16,7 @@ export type SocialLink = {
 }
 
 export type LiftingData = {
-    month: string,
+    date: string,
     bench: number,
     squat: number,
     deadlift: number,
