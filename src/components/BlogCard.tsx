@@ -1,18 +1,32 @@
+import Link from "next/link";
 import { SectionHeader } from "./SectionHeader";
 import { BlogData } from "@/lib/types"
 
 
 function BlogCard({ blogPost }: { blogPost: BlogData }) {
     return (
-        <div >
+        <div>
             <SectionHeader title="Blog" url="/blog" />
-            <div className="flex flex-col gap-[8px]">
-                <p className="text-white text-[16px] font-semibold">{blogPost.title}</p>
-                <p className="text-[#d9d9d9] text-[16px]">{blogPost.author} | {blogPost.date}</p>
-                <p className="text-white text-[16px]">{blogPost.summary}</p>
+            <div className="flex flex-col gap-2 text-white">
+                <p className="font-semibold">{blogPost.title}</p>
+                <p className="text-[#d9d9d9]">{blogPost.date}</p>
+                <p className="">{blogPost.summary}</p>
             </div>
         </div>
     )
 }
 
-export { BlogCard };
+function Blog({ blog }: { blog: BlogData }) {
+
+    return (
+        <Link href={`/blog/${blog.id}`}>
+            <div className="flex flex-col gap-2 rounded-2xl p-6 text-white hover:bg-white hover:text-background cursor-pointer">
+                <p className="font-semibold">{blog.title}</p>
+                <p className="text-[#d9d9d9]">{blog.date}</p>
+                <p className="">{blog.summary}</p>
+            </div>
+        </Link>
+    )
+}
+
+export { BlogCard, Blog };
