@@ -23,6 +23,7 @@ export type LiftingData = {
 }
 
 export type BlogData = {
+    id: number,
     author: string,
     date: string,
     title: string,

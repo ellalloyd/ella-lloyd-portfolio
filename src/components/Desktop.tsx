@@ -1,4 +1,4 @@
-import { socialLinks, liftingData, blogPost } from "@/lib/data";
+import { socialLinks, liftingData, blogs } from "@/lib/data";
 import { LinksCard } from "@/components/LinksCard";
 import { PowerliftingCard } from "@/components/PowerliftingCard";
 import { BlogCard } from "@/components/BlogCard"
@@ -31,7 +31,7 @@ function DesktopLayout() {
 
                 {/* Blog Card - top middle, spans 3 columns, 2 rows */}
                 <div className="lg:col-start-2 lg:col-span-3 lg:row-start-1 lg:row-span-2 bg-card rounded-4xl p-8">
-                    <BlogCard blogPost={blogPost} />
+                    <BlogCard blogPost={blogs[0]} />
                 </div>
 
                 {/* Name Card - middle, spans 2 columns, 2 rows */}
