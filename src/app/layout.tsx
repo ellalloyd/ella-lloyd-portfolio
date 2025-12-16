@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${libreBaskerville.variable} ${poppins.variable} antialiased square-dots-pattern font-sans`}
+        className={`${libreBaskerville.variable} ${poppins.variable} antialiased font-sans`}
       >
         <main>
           {children}
