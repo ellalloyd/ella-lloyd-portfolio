@@ -124,19 +124,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-@utility square-dots-pattern {
-  background-image: repeating-radial-gradient(circle at 50% 50%,
-      /* Center of each dot */
-      #ddd 0px,
-      /* Dot color */
-      #ddd 1px,
-      /* Dot size */
-      transparent 1.5px,
-      /* Gap color (transparent) */
-      transparent 100px
-      /* Spacing between dots */
-    );
-  background-size: 20px 20px;
-  /* Size of the repeating unit (dot + space) */
-}
