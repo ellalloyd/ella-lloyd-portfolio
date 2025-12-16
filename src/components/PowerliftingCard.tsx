@@ -1,15 +1,16 @@
+'use client'
+
 import { LiftingData } from "@/lib/types";
 import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from "recharts";
 
 function PowerliftingCard({ data }: { data: LiftingData[] }) {
     return (
-        <div>
-            <p className="text-white text-[24px]">Powerlifting</p>
-            <p className="text-[#d9d9d9] text-[16px]">1 Rep Max Tracker</p>
-            <p className="text-white text-[16px]">Squat | Bench | Deadlift</p>
-            <div className="flex-1 bg-white rounded-[16px] p-4">
+        <div className="flex flex-col gap-2 h-full">
+            <p className="text-white text-2xl pb-2">Powerlifting</p>
+            <p className="text-[#d9d9d9] text-base">1 Rep Max Tracker</p>
+            <div className="flex flex-1 bg-white rounded-sm p-4 min-h-0 items-center justify-center">
                 <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={data}>
+                    <LineChart data={data} margin={{ top: 5, right: 30, bottom: 5, left: 0 }}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="month" />
                         <YAxis />
