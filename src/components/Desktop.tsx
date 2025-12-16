@@ -20,7 +20,7 @@ function DesktopLayout() {
                 </div>
 
                 {/* Powerlifting Card - left side, bottom 4 rows */}
-                <div className="col-start-1 col-span-2 row-start-3 row-span-4 bg-card rounded-[32px] p-[32px] h-full">
+                <div className="lg:col-start-1 lg:col-span-2 lg:row-start-3 lg:row-span-4 bg-card rounded-4xl p-8 h-full">
                     <PowerliftingCard data={liftingData} />
                 </div>
 

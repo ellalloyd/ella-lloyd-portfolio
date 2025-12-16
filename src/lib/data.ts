@@ -42,10 +42,26 @@ export const socialLinks = [
 
 // Powerlifting data
 export const liftingData: LiftingData[] = [
-    { month: "Jan", squat: 225, bench: 155, deadlift: 275 },
-    { month: "Feb", squat: 235, bench: 160, deadlift: 285 },
-    { month: "Mar", squat: 245, bench: 165, deadlift: 295 },
-    { month: "Apr", squat: 255, bench: 170, deadlift: 305 },
-    { month: "May", squat: 265, bench: 175, deadlift: 315 },
-    { month: "Jun", squat: 275, bench: 180, deadlift: 325 }
+    { date: "Mar 2024", squat: 145, bench: 90, deadlift: 155 },
+    { date: "Apr 2024", squat: 160, bench: 100, deadlift: 175 },
+    { date: "May 2024", squat: 175, bench: 115, deadlift: 200 },
+    { date: "Jun 2024", squat: 193, bench: 115, deadlift: 200 },
+    { date: "Jul 2024", squat: 220, bench: 121, deadlift: 210 },
+    { date: "Aug 2024", squat: 225, bench: 130, deadlift: 220 },
+    { date: "Sep 2024", squat: 226, bench: 130, deadlift: 230 },
+    { date: "Oct 2024", squat: 237, bench: 132, deadlift: 245 },
+    { date: "Nov 2024", squat: 248, bench: 143, deadlift: 259 },
+    { date: "Dec 2024", squat: 248, bench: 145, deadlift: 259 },
+    { date: "Jan 2025", squat: 248, bench: 145, deadlift: 259 },
+    { date: "Feb 2025", squat: 248, bench: 149, deadlift: 259 },
+    { date: "Mar 2025", squat: 253, bench: 155, deadlift: 259 },
+    { date: "Apr 2025", squat: 259, bench: 155, deadlift: 265 },
+    { date: "May 2025", squat: 259, bench: 155, deadlift: 265 },
+    { date: "Jun 2025", squat: 259, bench: 155, deadlift: 265 },
+    { date: "Jul 2025", squat: 259, bench: 155, deadlift: 265 },
+    { date: "Aug 2025", squat: 259, bench: 155, deadlift: 265 },
+    { date: "Sep 2025", squat: 259, bench: 155, deadlift: 265 },
+    { date: "Oct 2025", squat: 265, bench: 171, deadlift: 265 },
+    { date: "Nov 2025", squat: 281, bench: 176, deadlift: 297 },
+    { date: "Dec 2025", squat: 281, bench: 176, deadlift: 297 },
 ];
