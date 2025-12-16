@@ -2,10 +2,10 @@ import { Project } from "@/lib/types";
 
 function ProjectCard({ project }: { project: Project }) {
     return (
-        <div className="border border-[#210534]/50 rounded-[16px] p-[24px] flex flex-col gap-[8px]">
-            <p className="text-white text-[16px] font-semibold">{project.name}</p>
-            <p className="text-[#d9d9d9] text-[16px]">{project.tools}</p>
-            <p className="text-white text-[16px]">{project.description}</p>
+        <div className="flex flex-col gap-2 min-w-[296px] max-w-[408px] lg:min-w-0 border border-background/50 rounded-2xl p-6 text-white  hover:bg-white hover:text-background cursor-pointer">
+            <p className="font-semibold">{project.name}</p>
+            <p className="text-[#d9d9d9]">{project.tools}</p>
+            <p className="">{project.description}</p>
         </div>
     );
 }
