@@ -1,11 +1,15 @@
-
+import { MapPinHouse } from "lucide-react";
 
 function LocationCard({ }) {
     return (
-        <div>
-            <p className="text-white text-[16px] font-semibold">{"San Diego"}</p>
-            <p className="text-[#d9d9d9] text-[16px]">{"2002 - 2021"}</p>
-            <p className="text-white text-[16px] line-clamp-3">{"Grew up here!"}</p>
+        <div className="h-full flex flex-row gap-2 items-center text-white">
+
+            <MapPinHouse size={24} />
+            <div>
+                <p className="text-white">{"San Diego"}</p>
+                <p className="text-[#d9d9d9]">{"2002 - 2021"}</p>
+            </div>
+
         </div>
     )
 }

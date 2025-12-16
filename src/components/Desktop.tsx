@@ -51,7 +51,7 @@ function DesktopLayout() {
                 </div>
 
                 {/* Location Card - second row left */}
-                <div className="col-start-1 row-start-2 bg-[#b8abc1] rounded-[32px] p-[32px] flex flex-col justify-center gap-[8px] overflow-hidden">
+                <div className="col-start-1 row-start-2 bg-[#b8abc1] rounded-4xl py-4 px-8 h-full overflow-hidden">
                     <LocationCard />
                 </div>
             </div>
