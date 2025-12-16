@@ -45,8 +45,8 @@ function DesktopLayout() {
                 <div className="col-start-3 col-span-2 row-start-5 row-span-2 bg-[#b8abc1] rounded-[32px] p-[32px] flex flex-col gap-[16px] overflow-hidden">
                     <p className="text-white text-[24px]">About Me</p>
                     <p className="text-white text-[16px] overflow-y-auto">
-                        I'm a passionate developer and designer who loves creating beautiful, functional web experiences.
-                        When I'm not coding, you'll find me lifting weights or exploring new cities.
+                        I'm a software engineer passionate about creating intuitive experiences users will love.
+                        When I'm not coding, you'll find me in the gym, crafting at home or exploring new cities.
                     </p>
                 </div>
 
