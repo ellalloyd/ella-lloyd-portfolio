@@ -7,10 +7,10 @@ import { ProjectsBento } from "@/components/Projects"
 
 function DesktopLayout() {
     return (
-        <div className="bg-background w-full h-screen p-[24px]">
-            <div className="grid grid-cols-6 grid-rows-6 gap-[24px] h-full">
+        <div className="bg-background w-full min-h-screen p-4 py-8 lg:p-6 lg:h-screen">
+            <div className="flex flex-col gap-3 lg:grid lg:grid-cols-6 lg:grid-rows-6 lg:gap-6 lg:h-full">
                 {/* Projects Card - spans 2 columns, 5 rows */}
-                <div className="col-start-5 col-span-2 row-start-1 row-span-5 bg-card rounded-[32px] p-[32px]">
+                <div className="lg:col-start-5 lg:col-span-2 lg:row-start-1 lg:row-span-5 bg-card rounded-4xl p-8">
                     <ProjectsBento />
                 </div>
 
