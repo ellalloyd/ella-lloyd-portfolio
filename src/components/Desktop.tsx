@@ -30,7 +30,7 @@ function DesktopLayout() {
                 </div>
 
                 {/* Blog Card - top middle, spans 3 columns, 2 rows */}
-                <div className="col-start-2 col-span-3 row-start-1 row-span-2 bg-card rounded-[32px] p-[32px] flex flex-col gap-[16px]">
+                <div className="lg:col-start-2 lg:col-span-3 lg:row-start-1 lg:row-span-2 bg-card rounded-4xl p-8">
                     <BlogCard blogPost={blogPost} />
                 </div>
 

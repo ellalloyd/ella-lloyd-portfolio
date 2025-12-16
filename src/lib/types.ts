@@ -27,4 +27,5 @@ export type BlogData = {
     date: string,
     title: string,
     summary: string,
+    content: string,
 }

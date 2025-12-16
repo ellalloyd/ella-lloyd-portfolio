@@ -4,12 +4,12 @@ import { BlogData } from "@/lib/types"
 
 function BlogCard({ blogPost }: { blogPost: BlogData }) {
     return (
-        <div >
+        <div className="">
             <SectionHeader title="Blog" url="/blog" />
-            <div className="flex flex-col gap-[8px]">
-                <p className="text-white text-[16px] font-semibold">{blogPost.title}</p>
-                <p className="text-[#d9d9d9] text-[16px]">{blogPost.author} | {blogPost.date}</p>
-                <p className="text-white text-[16px]">{blogPost.summary}</p>
+            <div className="flex flex-col gap-2 text-white">
+                <p className="font-semibold">{blogPost.title}</p>
+                <p className="text-[#d9d9d9]">{blogPost.date}</p>
+                <p className="">{blogPost.summary}</p>
             </div>
         </div>
     )
