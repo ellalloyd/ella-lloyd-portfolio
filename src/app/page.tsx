@@ -1,8 +1,8 @@
-import { DesktopLayout } from "@/components/Desktop"
+import { BentoGrid } from "@/components/BentoGrid"
 
 const Home = () => {
   return (
-    <DesktopLayout />
+    <BentoGrid />
   );
 };
 
