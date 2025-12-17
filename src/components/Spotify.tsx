@@ -17,7 +17,7 @@ function SpotifyClient({ trackName, trackArtist, albumURL, trackUrl, artistUrl }
 
     return (
         <div
-            className=""
+            className="w-full min-w-0 overflow-hidden"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -36,12 +36,12 @@ function SpotifyClient({ trackName, trackArtist, albumURL, trackUrl, artistUrl }
             {/* Show this div when hovered */}
             {isHovered && (
                 <div className="flex flex-row gap-2 items-center cursor-pointer w-fit">
-                    <div className="flex size-6 ">
+                    <div className="flex size-6 shrink-0">
                         {albumURL && <img src={albumURL} alt="Album Art" className="rounded-sm" />}
                     </div>
-                    <div className="flex flex-col gap-1 truncate">
-                        <Link className="text-primary hover:underline underline-offset-4" href={trackUrl}>{trackName}</Link>
-                        <Link className="text-sm text-secondary hover:underline underline-offset-4" href={artistUrl}>{trackArtist}</Link>
+                    <div className="flex flex-col flex-1 gap-1 min-w-0">
+                        <Link className="text-primary hover:underline underline-offset-4 truncate" href={trackUrl}>{trackName}</Link>
+                        <Link className="text-sm text-secondary hover:underline underline-offset-4 truncate" href={artistUrl}>{trackArtist}</Link>
                     </div>
                 </div>
             )}
