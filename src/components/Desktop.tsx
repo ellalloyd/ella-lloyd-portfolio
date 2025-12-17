@@ -4,6 +4,7 @@ import { PowerliftingCard } from "@/components/PowerliftingCard";
 import { BlogCard } from "@/components/BlogCard"
 import { LocationCard } from "./LocationCard";
 import { ProjectsBento } from "@/components/Projects"
+import { Spotify } from "./SpotifyWrapper";
 
 function DesktopLayout() {
     return (
@@ -19,15 +20,23 @@ function DesktopLayout() {
                     <LinksCard socialLinks={socialLinks} />
                 </div>
 
+                <div className="flex gap-[12px] lg:contents">
+                    {/* Spotify Card - top left */}
+                    <div className="lg:col-start-1 lg:row-start-1 flex lg:min-h-0 bg-card rounded-4xl p-8 items-center">
+                        <Spotify />
+                    </div>
+                    {/* Location Card - second row left */}
+                    <div className="col-start-1 row-start-2 bg-card rounded-4xl py-4 px-8 h-full overflow-hidden">
+                        <LocationCard />
+                    </div>
+                </div>
+
                 {/* Powerlifting Card - left side, bottom 4 rows */}
                 <div className="lg:col-start-1 lg:col-span-2 lg:row-start-3 lg:row-span-4 bg-card rounded-4xl p-8 h-full">
                     <PowerliftingCard data={liftingData} />
                 </div>
 
-                {/* Spotify Card - top left */}
-                <div className="col-start-1 row-start-1 bg-card rounded-[32px] p-[32px] flex items-center gap-[16px] overflow-hidden">
 
-                </div>
 
                 {/* Blog Card - top middle, spans 3 columns, 2 rows */}
                 <div className="lg:col-start-2 lg:col-span-3 lg:row-start-1 lg:row-span-2 bg-card rounded-4xl p-8">
@@ -50,10 +59,7 @@ function DesktopLayout() {
                     </p>
                 </div>
 
-                {/* Location Card - second row left */}
-                <div className="col-start-1 row-start-2 bg-card rounded-4xl py-4 px-8 h-full overflow-hidden">
-                    <LocationCard />
-                </div>
+
             </div>
         </div>
     );

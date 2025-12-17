@@ -1,5 +1,3 @@
-'use client'
-
 import { DesktopLayout } from "@/components/Desktop"
 
 const Home = () => {

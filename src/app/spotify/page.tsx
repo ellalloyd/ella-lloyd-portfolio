@@ -1,4 +1,4 @@
-import { Spotify } from "@/components/Spotify";
+import { Spotify } from "@/components/SpotifyWrapper";
 import { Suspense } from "react";
 import { Loader } from "lucide-react";
 
