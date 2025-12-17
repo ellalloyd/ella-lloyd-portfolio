@@ -22,9 +22,10 @@ export const blogs = [{
     content: "I often feel like I’m not doing enough. I’m not up to date on the news enough; I’m not learning fast enough; I’m not socializing enough; I’m not spending enough time on my hobbies. The list goes on, and it always feels unfinished.\nBut why do we feel this way?\nIn a recent episode of *Diary of a CEO*, guest Arthur C. Brooks—a Harvard professor and social scientist—discusses the hedonic treadmill and what it means to live a meaningful life. The hedonic treadmill is the psychological phenomenon where humans quickly adapt to improvements in their circumstances, raising their baseline expectations and, in turn, their desires. In other words, we will always want more because we adapt to what we already have. Brooks argues that instead of constantly trying to increase what we have, we should learn to better manage what we want.\nOne line that particularly stuck with me was: “We need struggle and suffering for us to actually get the joy we seek.” Nothing deeply satisfying comes easily. The effort, frustration, and discomfort are what make the outcome feel earned—and meaningful.\nWhile this idea can sound grim, it ultimately feels grounding. It reframes dissatisfaction not as a personal failure, but as part of being human. More than anything, it serves as a reminder to practice gratitude, slow the chase for “more,” and focus on the deeper meaning behind what we’re striving for in the first place.",
 }];
 
-const locations = [
-    { city: "San Diego", years: "2002 - 2021", description: "Grew up exploring beaches and started coding journey" },
-    { city: "San Francisco", years: "2021 - Present", description: "Working in tech and building amazing products" }
+export const locations = [
+    { city: "San Diego", years: "2002 - 2021", description: "Grew up in the best city" },
+    { city: "Atlanta", years: "2021 - 2025", description: "Studying at Georgia Tech" },
+    { city: "Charlotte", years: "2025 - ", description: "Currently adulting" },
 ];
 
 const currentTrack = {
