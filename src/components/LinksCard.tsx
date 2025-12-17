@@ -9,7 +9,7 @@ function LinksCard({ socialLinks }: { socialLinks: SocialLink[] }) {
                     <a
                         key={index}
                         href={link.url}
-                        className="bg-[#d9d9d9] rounded-2xl w-[50px] h-[50px] flex items-center justify-center hover:bg-white transition-colors"
+                        className="bg-secondary rounded-2xl size-[50px] flex items-center justify-center inset-shadow-background/50 inset-shadow-xs hover:bg-white transition-colors"
                         aria-label={link.label}
                     >
                         <Icon className="w-6 h-6 text-[#210534]" />
