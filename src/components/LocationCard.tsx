@@ -2,7 +2,7 @@ import { MapPinHouse } from "lucide-react";
 
 function LocationCard({ }) {
     return (
-        <div className="h-full flex flex-row gap-2 items-center text-white">
+        <div className="w-full flex flex-row gap-2 items-center text-white">
 
             <MapPinHouse size={24} />
             <div className="flex flex-col gap-1">

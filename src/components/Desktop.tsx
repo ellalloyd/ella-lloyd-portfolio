@@ -20,13 +20,13 @@ function DesktopLayout() {
                     <LinksCard socialLinks={socialLinks} />
                 </div>
 
-                <div className="flex gap-[12px] lg:contents">
+                <div className="flex gap-3 lg:contents">
                     {/* Spotify Card - top left */}
-                    <div className="lg:col-start-1 lg:row-start-1 flex lg:min-h-0 bg-card rounded-4xl p-8 items-center">
+                    <div className="lg:col-start-1 lg:row-start-1 lg:flex lg:min-h-0 h-full bg-card rounded-4xl p-8 items-center">
                         <Spotify />
                     </div>
                     {/* Location Card - second row left */}
-                    <div className="col-start-1 row-start-2 bg-card rounded-4xl py-4 px-8 h-full overflow-hidden">
+                    <div className="lg:col-start-1 lg:row-start-2 lg:flex-none lg:min-h-0 flex-1 bg-card rounded-4xl py-4 px-8 flex items-center">
                         <LocationCard />
                     </div>
                 </div>
