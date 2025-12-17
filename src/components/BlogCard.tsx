@@ -20,9 +20,9 @@ function Blog({ blog }: { blog: BlogData }) {
 
     return (
         <Link href={`/blog/${blog.id}`}>
-            <div className="flex flex-col gap-2 rounded-2xl p-6 text-white hover:bg-white hover:text-background cursor-pointer">
+            <div className="content-card">
                 <p className="font-semibold">{blog.title}</p>
-                <p className="text-[#d9d9d9]">{blog.date}</p>
+                <p className="text-secondary">{blog.date}</p>
                 <p className="">{blog.summary}</p>
             </div>
         </Link>
