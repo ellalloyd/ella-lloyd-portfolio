@@ -1,7 +1,7 @@
 'use client'
 
 import { ProjectCard } from "@/components/ProjectCard";
-import ContentHeader from "@/components/ProjectHeader";
+import ContentHeader from "@/components/ContentHeader";
 import { projects } from "@/lib/data";
 
 const ProjectsPage = () => {
