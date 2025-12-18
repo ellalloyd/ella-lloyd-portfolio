@@ -12,27 +12,36 @@ function findBlogById(blogId: string | undefined): BlogData | undefined {
     return blog;
 }
 
+async function BlogContent({ paramsPromise }: { paramsPromise: Promise<{ [key: string]: string | undefined }> }) {
+    'use cache'
+    cacheLife('hours')
+
+    const params = await paramsPromise
+    const blogId = params.blogId
+    const blog = findBlogById(blogId);
+
+    return (
+        <>
+            <ContentHeader title={blog?.title} url="blog" />
+            <div className="flex gap-4 flex-col pb-0 w-full text-white">
+                <p className="text-[#d9d9d9]">{blog?.date}</p>
+                <article className="prose prose-invert">
+                    <BlogDOAC />
+                </article>
+            </div>
+        </>
+    )
+}
+
 export default async function Page({
     params,
 }: {
     params: Promise<{ [key: string]: string | undefined }>
 }) {
-    'use cache'
-    cacheLife('hours')
-
-    const blogId = (await params).blogId
-    const blog = findBlogById(blogId);
-
     return (
         <div className="flex flex-col gap-4 mx-auto my-8 p-4 rounded-4xl w-full lg:w-2/3 items-center justify-center ">
-            <Suspense fallback={<p>"Loading..."</p>}>
-                <ContentHeader title={blog?.title} url="blog" />
-                <div className="flex gap-4 flex-col pb-0 w-full text-white">
-                    <p className="text-[#d9d9d9]">{blog?.date}</p>
-                    <article className="prose prose-invert">
-                        <BlogDOAC />
-                    </article>
-                </div>
+            <Suspense fallback={<p>Loading...</p>}>
+                <BlogContent paramsPromise={params} />
             </Suspense>
         </div>
     )
