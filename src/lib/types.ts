@@ -6,7 +6,6 @@ export type Project = {
     name: string,
     tools: string,
     description: string,
-    content: string,
 }
 
 export type SocialLink = {
