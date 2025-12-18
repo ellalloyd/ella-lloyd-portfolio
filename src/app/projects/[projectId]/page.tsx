@@ -39,7 +39,7 @@ export default async function Page({
     params: Promise<{ [key: string]: string | undefined }>
 }) {
     return (
-        <div className="flex flex-col gap-4 mx-auto my-8 p-4 rounded-4xl w-full lg:w-2/3 items-center justify-center">
+        <div className="content-page">
             <Suspense fallback={<p>Loading...</p>}>
                 <ProjectContent paramsPromise={params} />
             </Suspense>

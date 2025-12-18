@@ -6,7 +6,7 @@ import { projects } from "@/lib/data";
 
 const ProjectsPage = () => {
     return (
-        <div className="flex flex-col gap-4 mx-auto my-8 p-4 rounded-4xl w-full lg:w-2/3 items-center justify-center">
+        <div className="content-page">
             <ContentHeader title="Projects" url="" />
             <div className="flex gap-4 flex-col pb-0 w-fit">
                 {projects.map((project) => (

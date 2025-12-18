@@ -1,23 +1,23 @@
 import { Github, Linkedin, Mail, Twitter, Instagram } from "lucide-react";
-import { LiftingData } from "./types";
+import { BlogData, LiftingData, Project, SocialLink } from "./types";
 
 
 // Portfolio data
-export const projects = [
+export const projects: Project[] = [
     {
         id: 1,
         name: "ellalloyd.xyz 2.0",
-        tools: "Figma, React, Cursor",
+        tools: "Figma | React | Next.js | Cursor",
         description: "A personal portfolio website designed as a bento-style playground for experimentation.",
     }
 ];
 
-export const blogs = [{
+export const blogs: BlogData[] = [{
     id: 1,
     title: "Why You’re Never Satisfied!",
     author: "Ella Lloyd",
     date: "Dec 15, 2025",
-    summary: "Thoughts on the podcast episode DOAC: Why You’re Never Satisfied! with Arthur C. Brooks, Harvard Professor & Social Scientist.",
+    summary: "Thoughts on the podcast episode 'DOAC: Why You’re Never Satisfied!' with Arthur C. Brooks, Harvard Professor & Social Scientist.",
 }];
 
 export const locations = [
@@ -26,12 +26,7 @@ export const locations = [
     { city: "Charlotte", years: "2025 - ", description: "Currently adulting" },
 ];
 
-const currentTrack = {
-    title: "Blinding Lights",
-    artist: "The Weeknd"
-};
-
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
     { icon: Github, url: "https://github.com/ellalloyd", label: "GitHub" },
     { icon: Linkedin, url: "https://linkedin.com/in/ella-lloyd", label: "LinkedIn" },
     { icon: Twitter, url: "https://x.com/lalloydcodes", label: "Twitter" },

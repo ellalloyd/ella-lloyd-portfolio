@@ -6,7 +6,7 @@ import { blogs } from "@/lib/data";
 
 const BlogsPage = () => {
     return (
-        <div className="flex flex-col gap-4 mx-auto my-8 p-4 rounded-4xl w-full lg:w-2/3 items-center justify-center ">
+        <div className="content-page">
             <ContentHeader title="Blog" url="" />
             <div className="flex gap-4 flex-col pb-0 min-w-[296px] max-w-[408px]">
                 {blogs.map((blog) => (
