@@ -2,7 +2,7 @@
 
 import { projects } from "@/lib/data"
 import { Project } from "@/lib/types"
-import ContentHeader from "@/components/ProjectHeader"
+import ContentHeader from "@/components/ContentHeader"
 import PortfolioContent from "../../../../content/portfolio.mdx";
 import { Suspense } from 'react';
 import { cacheLife } from "next/cache";
