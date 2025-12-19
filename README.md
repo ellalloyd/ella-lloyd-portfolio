@@ -1,4 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ellalloyd.xyz — Personal Portfolio
+
+My personal portfolio showcasing selected software engineering, frontend, and UX projects, with a focus on scalable web applications and thoughtful design systems.
+
+🔗 Live site: https://www.ellalloyd.xyz
+
+Deployed with Vercel and optimized for desktop and mobile.
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Deployment:** Vercel
+
+## Key Features
+
+- Responsive, accessible layout optimized for desktop and mobile
+- Custom design system with reusable components
+- Animated transitions and micro-interactions
+- Project case studies highlighting technical decisions and process
+- Experimental features for learning, related to my real life
+
+## Design & Engineering Notes
+
+- Built with a component-driven architecture to support rapid iteration
+- Design system inspired by bullet-journal layout aesthetics
 
 ## Getting Started
 
